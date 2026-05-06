@@ -40,6 +40,7 @@ def main():
 
     print("\n=== Committing and pushing to GitHub ===")
     run(["git", "add", "."])
+    # Public repo: keep commit message bare. No Co-Authored-By trailers, no Claude footers.
     run([
         "git",
         "commit",
