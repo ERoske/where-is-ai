@@ -13,7 +13,7 @@ I'm a data scientist by training, and one of the things I miss in the CEO chair 
 
 The Bureau of Labor Statistics publishes a 38 megabyte zip file every May with metropolitan-level employment for every Standard Occupational Classification code in the country. Anyone can download it. Almost nobody does, because it is unglamorous and the column names are exhausting.
 
-I pulled the May 2024 release and filtered to two SOC codes:
+I pulled the May 2024 release — the most recent one BLS has published (the May 2025 release is scheduled for Friday, May 15, 2026). Filtered to two SOC codes:
 
 - **15-1221** — Computer and Information Research Scientists
 - **15-2051** — Data Scientists

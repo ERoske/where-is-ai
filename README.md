@@ -16,7 +16,7 @@ This repo contains everything: the scripts, the data, the heatmaps, the findings
 
 ### 1. Where are the AI jobs in the USA?
 
-Source: U.S. Bureau of Labor Statistics, **Occupational Employment and Wage Statistics (OEWS)**, May 2024 release (the most recent BLS has published as of May 2026; May 2025 typically drops in April-May 2026 and the fetch script is set up to use whichever release is current). Two AI-relevant SOC codes:
+Source: U.S. Bureau of Labor Statistics, **Occupational Employment and Wage Statistics (OEWS)**, May 2024 release. The May 2025 release is scheduled to drop on **Friday, May 15, 2026** per BLS's release schedule. The fetch script tries `oesm25ma.zip` first and falls back to `oesm24ma.zip`, so re-running after May 15 will automatically pick up the new release. Two AI-relevant SOC codes:
 
 - **15-1221** — Computer and Information Research Scientists
 - **15-2051** — Data Scientists
