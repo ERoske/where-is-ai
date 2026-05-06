@@ -1,8 +1,13 @@
 """
-Render the global AI research heatmap from OpenAlex data.
+Render the global AI research heatmap from OpenAlex data, METRO-aggregated.
 
-Filters out single-institution outliers (concept-mapping noise from fusion/biology
-labs catching the broad "Artificial Intelligence" concept).
+Reads world_ai_research_by_metro.csv (produced by aggregate_to_metro.py) which
+groups fragmented U.S. cities into proper Census MSAs/CSAs (Bay Area, Boston Metro)
+and combines Hong Kong's districts. International cities pass through unchanged
+since they're already metro-coherent in OpenAlex's tagging.
+
+Filters out single-institution concept-mapping noise (fusion/biology labs caught
+in the broad "Artificial Intelligence" tag).
 """
 from pathlib import Path
 
@@ -11,17 +16,6 @@ import plotly.graph_objects as go
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 OUTPUT_PATH = Path(__file__).resolve().parent.parent / "images" / "Heatmap-World-AI-Cities.png"
-
-# Cities to relabel for clarity (OpenAlex sometimes returns ambiguous city names)
-CITY_RELABEL = {
-    ("Cambridge", "US"): "Boston/MIT",
-    ("Mountain View", "US"): "Mountain View",
-    ("Stanford", "US"): "Stanford",
-    ("Pittsburgh", "US"): "Pittsburgh",
-    ("Hong Kong", "HK"): "Hong Kong",
-    ("Chennai", "IN"): "Chennai",
-    ("Beijing", "CN"): "Beijing",
-}
 
 # Cities to actually LABEL on the map. Other cities show as dots only.
 # Picked for narrative significance (size + surprise + geographic diversity).
@@ -40,24 +34,23 @@ LABEL_CITIES = {
     ("Toronto", "CA"),
     ("Sydney", "AU"),
     ("Melbourne", "AU"),
-    ("Cambridge", "US"),
-    ("Stanford", "US"),
-    ("Mountain View", "US"),
+    ("Boston Metro", "US"),
+    ("SF-San Jose Bay Area", "US"),
     ("Pittsburgh", "US"),
     ("New York", "US"),
     ("Chennai", "IN"),
+    ("Bengaluru", "IN"),
 }
 
-# Per-city label position override
+# Per-metro label position override
 LABEL_POSITION = {
     ("Beijing", "CN"): "top right",
     ("Shanghai", "CN"): "bottom right",
     ("Hangzhou", "CN"): "middle right",
     ("Shenzhen", "CN"): "bottom right",
     ("Hong Kong", "HK"): "bottom center",
-    ("Stanford", "US"): "bottom left",
-    ("Mountain View", "US"): "top left",
-    ("Cambridge", "US"): "top right",
+    ("SF-San Jose Bay Area", "US"): "middle left",
+    ("Boston Metro", "US"): "top right",
     ("Pittsburgh", "US"): "bottom center",
     ("New York", "US"): "bottom right",
     ("Chennai", "IN"): "bottom center",
@@ -67,10 +60,8 @@ LABEL_POSITION = {
     ("Zurich", "CH"): "top center",
 }
 
-# Manual whitelist for known AI hubs that may have only 1 institution in top 200 but matter
+# Manual whitelist for metros that may not pass the institution-count filter but matter
 AI_HUB_WHITELIST = {
-    ("Stanford", "US"),
-    ("Berkeley", "US"),
     ("Pittsburgh", "US"),
     ("Tel Aviv-Yafo", "IL"),
     ("Lausanne", "CH"),
@@ -79,8 +70,8 @@ AI_HUB_WHITELIST = {
 
 
 def main():
-    df = pd.read_csv(DATA_DIR / "world_ai_research_by_city.csv")
-    print(f"Loaded {len(df)} cities")
+    df = pd.read_csv(DATA_DIR / "world_ai_research_by_metro.csv")
+    print(f"Loaded {len(df)} metros")
 
     # Filter: drop concept-mapping noise (single-institution outliers from non-AI fields).
     # Keep cities with 2+ institutions OR a single institution whose count is >= 1500
@@ -96,12 +87,10 @@ def main():
     # Take top 30 by AI works
     df = df.sort_values("ai_works", ascending=False).head(30).reset_index(drop=True)
 
-    # Relabel where helpful
-    df["display"] = df.apply(
-        lambda r: CITY_RELABEL.get((r["city"], r["country_code"]), r["city"]), axis=1
-    )
+    # Display name = the metro name as-is
+    df["display"] = df["city"]
 
-    # Only show labels for selected cities
+    # Only show labels for selected metros
     df["label"] = df.apply(
         lambda r: r["display"] if (r["city"], r["country_code"]) in LABEL_CITIES else "", axis=1
     )
@@ -155,6 +144,13 @@ def main():
     ))
 
     fig.update_layout(
+        title=dict(
+            text="<b>WHERE AI RESEARCH HAPPENS</b><br><span style='font-size:14px; color:#9eb3d6'>OpenAlex · AI/ML papers May 2025 to May 2026 · Top 200 institutions, aggregated to METRO level</span>",
+            font=dict(color="white", size=22, family="Helvetica, Arial, sans-serif"),
+            x=0.05,
+            xanchor="left",
+            y=0.96,
+        ),
         geo=dict(
             projection=dict(type="natural earth"),
             showland=True,
@@ -169,13 +165,6 @@ def main():
         ),
         paper_bgcolor="#040810",
         plot_bgcolor="#040810",
-        title=dict(
-            text="<b>WHERE AI RESEARCH HAPPENS</b><br><span style='font-size:14px; color:#9eb3d6'>OpenAlex · AI/ML papers published May 2025 to May 2026 · Top 200 institutions, aggregated by city · cities with 2+ contributing institutions</span>",
-            font=dict(color="white", size=22, family="Helvetica, Arial, sans-serif"),
-            x=0.05,
-            xanchor="left",
-            y=0.96,
-        ),
         margin=dict(l=0, r=0, t=80, b=20),
         width=1920,
         height=1080,
@@ -188,10 +177,10 @@ def main():
 
     # Save findings markdown
     findings = DATA_DIR / "world_findings.md"
-    lines = ["# Global AI Research Hub Findings — Original Analysis\n"]
-    lines.append("**Data**: OpenAlex API. AI/ML papers published 2025-05-06 through 2026-05-06. Top 200 institutions worldwide aggregated by city. Filter: cities with 2+ contributing institutions in the top 200.\n\n")
-    lines.append("## Top 25 cities by AI/ML research output\n")
-    lines.append("| # | City | Country | AI papers (12mo) | Institutions | Top institution |\n|---|---|---|---|---|---|\n")
+    lines = ["# Global AI Research Hub Findings — Original Analysis (METRO level)\n"]
+    lines.append("**Data**: OpenAlex API. AI/ML papers published 2025-05-06 through 2026-05-06. Top 200 institutions worldwide, aggregated to METRO level via hand-curated city→metro mapping (U.S. Census MSAs/CSAs for U.S. metros, OpenAlex city tags for everywhere else, Hong Kong districts consolidated).\n\n")
+    lines.append("## Top 25 metros by AI/ML research output\n")
+    lines.append("| # | Metro | Country | AI papers (12mo) | Institutions | Top institution |\n|---|---|---|---|---|---|\n")
     for i, r in df.iterrows():
         lines.append(f"| {i+1} | {r['display']} | {r['country']} | {int(r['ai_works']):,} | {int(r['institutions'])} | {r['top_institution']} |\n")
     findings.write_text("".join(lines), encoding="utf-8")

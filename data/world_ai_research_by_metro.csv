@@ -1,0 +1,116 @@
+city,country,country_code,ai_works,institutions,lat,lon,top_institution,top_institution_works
+Toki,Japan,JP,203700,1,35.349998474121094,137.18333435058594,National Institute for Fusion Science,203700
+Braunschweig,Germany,DE,121255,1,52.21142578125,10.531188011169434,Leibniz Institute DSMZ – German Collection of Microorganisms and Cell Cultures,121255
+Nagoya,Japan,JP,59993,1,35.18146896362305,136.90640258789062,Nagoya University,59993
+Beijing,China,CN,42843,15,39.9075,116.39723,Chinese Academy of Sciences,6615
+Shanghai,China,CN,16331,7,31.22221946716309,121.45806121826172,Shanghai Jiao Tong University,5352
+Nanjing,China,CN,14194,7,32.06167,118.77778,Southeast University,3521
+Hong Kong,Hong Kong,HK,12271,5,22.28,114.17,University of Hong Kong,3300
+Hangzhou,China,CN,10550,5,30.29365,120.16142,Zhejiang University,5423
+Paris,France,FR,10530,3,48.85341,2.3488,Centre National de la Recherche Scientifique,7809
+Chennai,India,IN,9678,5,13.08784,80.27847,Saveetha University,3513
+Wuhan,China,CN,9476,4,30.583330154418945,114.26667022705078,Wuhan University,3349
+Xi'an,China,CN,9123,3,34.258331298828125,108.9286117553711,Northwestern Polytechnical University,3228
+Guangzhou,China,CN,9012,4,23.11667,113.25,Sun Yat-sen University,3603
+London,United Kingdom,GB,8241,4,51.50853,-0.12574,University College London,2944
+Chengdu,China,CN,8067,3,30.66666984558105,104.0666732788086,University of Electronic Science and Technology of China,3825
+Changsha,China,CN,7764,3,28.19874,112.97087,Central South University,3014
+Shenzhen,China,CN,7435,5,22.54553985595703,114.06829833984376,Shenzhen University,2716
+SF-San Jose Bay Area,United States,US,6997,3,37.55,-122.1,Stanford University,2867
+Hefei,China,CN,6737,3,31.86389,117.28083,University of Science and Technology of China,3251
+Harbin,China,CN,5932,2,45.75,126.6500015258789,Harbin Institute of Technology,4457
+Boston Metro,United States,US,5863,3,42.36,-71.06,Harvard University,2208
+Singapore,Singapore,SG,5725,2,1.28967,103.85007,Nanyang Technological University,3078
+Seoul,South Korea,KR,4913,4,37.566,126.9784,Seoul National University,1498
+Toronto,Canada,CA,4276,2,43.70643,-79.39864,University of Toronto,2256
+Sydney,Australia,AU,3935,3,-33.86785,151.20732,The University of Sydney,1508
+Tianjin,China,CN,3720,2,39.14221954345703,117.17666625976562,Tianjin University,2405
+Chongqing,China,CN,3589,2,29.56026077270508,106.55770874023438,Chongqing University,2328
+Dalian,China,CN,3386,2,38.9122200012207,121.60221862792967,Dalian University of Technology,2309
+Munich,Germany,DE,3221,2,48.13743,11.57549,Technical University of Munich,2092
+New York,United States,US,3076,2,40.71427154541016,-74.00596618652344,New York University,1654
+Zurich,Switzerland,CH,2931,2,47.36667,8.55,ETH Zurich,1819
+Melbourne,Australia,AU,2824,2,-37.814,144.96332,The University of Melbourne,1499
+Montreal,Canada,CA,2789,2,45.5020751953125,-73.56744384765625,Prompt (Canada),1636
+Atlanta,United States,US,2755,2,33.749,-84.38798,Georgia Institute of Technology,1772
+Carolina,Puerto Rico,PR,2563,1,18.38078,-65.95739,University of Puerto Rico at Carolina,2563
+Vellore,India,IN,2510,1,12.9184,79.13255,Vellore Institute of Technology University,2510
+Los Angeles,United States,US,2498,2,34.05223,-118.24368,University of Southern California,1366
+Jinan,China,CN,2450,1,36.66833,116.99722,Shandong University,2450
+Oxford,United Kingdom,GB,2328,1,51.75222,-1.25596,University of Oxford,2328
+Shenyang,China,CN,2283,1,41.79222106933594,123.43277740478516,Northeastern University,2283
+Riyadh,Saudi Arabia,SA,2092,2,24.68773078918457,46.72185134887695,Princess Nourah bint Abdulrahman University,1108
+Pittsburgh,United States,US,1997,1,40.44062,-79.99589,Carnegie Mellon University,1997
+Kunming,China,CN,1981,2,25.061561584472656,102.69563293457033,Kunming University of Science and Technology,1019
+Baltimore,United States,US,1930,1,39.29038,-76.61219,Johns Hopkins University,1930
+Changchun,China,CN,1902,1,43.88,125.32278,Jilin University,1902
+Tokyo,Japan,JP,1864,1,35.68949890136719,139.69171142578125,The University of Tokyo,1864
+Ann Arbor,United States,US,1859,1,42.27756,-83.74088,University of Michigan,1859
+Cambridge,United Kingdom,GB,1829,1,52.2,0.11667,University of Cambridge,1829
+Amsterdam,The Netherlands,NL,1811,1,52.37403,4.88969,University of Amsterdam,1811
+Coimbatore,India,IN,1779,1,11.00555,76.96612,Amrita Vishwa Vidyapeetham,1779
+West Lafayette,United States,US,1775,1,40.42587,-86.90807,Purdue University West Lafayette,1775
+Mohali,India,IN,1774,1,30.679950714111328,76.72210693359375,Chandigarh University,1774
+Urbana,United States,US,1645,1,40.11059,-88.20727,University of Illinois Urbana-Champaign,1645
+Seattle,United States,US,1636,1,47.60621,-122.33207,University of Washington,1636
+Xiamen,China,CN,1630,1,24.47978973388672,118.08187103271484,Xiamen University,1630
+Ithaca,United States,US,1614,1,42.44063,-76.49661,Cornell University,1614
+Pune,India,IN,1499,1,18.51957,73.85535,Symbiosis International University,1499
+Xuzhou,China,CN,1467,1,34.20441818237305,117.28385925292967,China University of Mining and Technology,1467
+Fuzhou,China,CN,1462,1,26.061389923095703,119.3061065673828,Fuzhou University,1462
+Chandigarh,India,IN,1460,1,30.736289978027344,76.78839874267578,Chitkara University,1460
+Jakarta,Indonesia,ID,1428,1,-6.21462,106.84513,Binus University,1428
+Gainesville,United States,US,1388,1,29.65163,-82.32483,University of Florida,1388
+Delft,The Netherlands,NL,1378,1,52.00667190551758,4.355559825897217,Delft University of Technology,1378
+Edinburgh,United Kingdom,GB,1352,1,55.95206,-3.19648,University of Edinburgh,1352
+New Haven,United States,US,1351,1,41.30815,-72.92816,Yale University,1351
+San Diego,United States,US,1349,1,32.71571,-117.16472,University of California San Diego,1349
+Chapel Hill,United States,US,1347,1,35.9132,-79.05584,University of North Carolina at Chapel Hill,1347
+Milan,Italy,IT,1329,1,45.46427,9.18951,Politecnico di Milano,1329
+Madison,United States,US,1317,1,43.07305,-89.40123,University of Wisconsin–Madison,1317
+Daejeon,South Korea,KR,1315,1,36.34912872314453,127.38493347167967,Korea Advanced Institute of Science and Technology,1315
+Austin,United States,US,1305,1,30.26715,-97.74306,The University of Texas at Austin,1305
+Qingdao,China,CN,1298,1,36.06488037109375,120.3804168701172,Shandong University of Science and Technology,1298
+Phagwāra,India,IN,1279,1,31.224519729614254,75.77387237548828,Lovely Professional University,1279
+Zhengzhou,China,CN,1276,1,34.75777816772461,113.64861297607422,Zhengzhou University,1276
+Ürümqi,China,CN,1253,1,43.80096054077149,87.60045623779297,Xinjiang University,1253
+Leuven,Belgium,BE,1252,1,50.87959,4.70093,KU Leuven,1252
+Suzhou,China,CN,1244,1,31.30408,120.59538,Soochow University,1244
+Philadelphia,United States,US,1239,1,39.95238,-75.16362,University of Pennsylvania,1239
+Bologna,Italy,IT,1238,1,44.49381,11.33875,University of Bologna,1238
+Vancouver,Canada,CA,1233,1,49.24966,-123.11934,University of British Columbia,1233
+Macao,Macao,MO,1217,1,22.20056,113.54611,University of Macau,1217
+Rome,Italy,IT,1208,1,41.89193,12.51133,Sapienza University of Rome,1208
+State College,United States,US,1203,1,40.79339,-77.86,Pennsylvania State University,1203
+Vijayawada,India,IN,1194,1,16.507450103759766,80.64659881591797,Koneru Lakshmaiah Education Foundation,1194
+Aachen,Germany,DE,1185,1,50.776641845703125,6.083419799804688,RWTH Aachen University,1185
+Manipal,India,IN,1178,1,13.35,74.78333,Manipal Academy of Higher Education,1178
+Gif-sur-Yvette,France,FR,1175,1,48.68333,2.13333,Université Paris-Saclay,1175
+Tempe,United States,US,1154,1,33.41477,-111.90931,Arizona State University,1154
+Wuxi,China,CN,1112,1,31.568870544433597,120.28856658935548,Jiangnan University,1112
+College Station,United States,US,1109,1,30.62798,-96.33441,Texas A&M University,1109
+Lausanne,Switzerland,CH,1103,1,46.516,6.63282,École Polytechnique Fédérale de Lausanne,1103
+Manchester,United Kingdom,GB,1096,1,53.48095,-2.23743,University of Manchester,1096
+Bandung,Indonesia,ID,1090,1,-6.92222,107.60694,Telkom University,1090
+Durham,United States,US,1063,1,35.99403,-78.89862,Duke University,1063
+Chicago,United States,US,1058,1,41.85003,-87.65005,University of Chicago,1058
+Pulchowk,Nepal,NP,1056,1,27.67824,85.31685,Institute of Engineering,1056
+Heidelberg,Germany,DE,1052,1,49.40768,8.69079,Heidelberg University,1052
+Edmonton,Canada,CA,1051,1,53.55014,-113.46871,University of Alberta,1051
+College Park,United States,US,1047,1,38.98067,-76.93692,"University of Maryland, College Park",1047
+Glasgow,United Kingdom,GB,1035,1,55.86515,-4.25763,University of Glasgow,1035
+Haikou,China,CN,1031,1,20.034210205078125,110.34651184082033,Hainan University,1031
+Karlsruhe,Germany,DE,1023,1,49.00937,8.40444,Karlsruhe Institute of Technology,1023
+Guilin,China,CN,1022,1,25.281644821166992,110.3372802734375,Guilin University of Electronic Technology,1022
+Dehradun,India,IN,1020,1,30.32443046569824,78.03392028808594,Graphic Era University,1020
+Zhenjiang,China,CN,1011,1,32.21086120605469,119.455078125,Jiangsu University,1011
+Padua,Italy,IT,1008,1,45.40797,11.88586,University of Padua,1008
+Hamburg,Germany,DE,1006,1,53.55073,9.99302,Universität Hamburg,1006
+Waterloo,Canada,CA,1000,1,43.4668,-80.51639,University of Waterloo,1000
+Blacksburg,United States,US,999,1,37.22957,-80.41394,Virginia Tech,999
+Nijmegen,The Netherlands,NL,999,1,51.8425,5.85278,Radboud University Nijmegen,999
+Nanning,China,CN,997,1,22.816669464111328,108.3166732788086,Guangxi University,997
+Brisbane,Australia,AU,985,1,-27.46794,153.02809,The University of Queensland,985
+St Louis,United States,US,984,1,38.62727,-90.19789,Washington University in St. Louis,984
+Ningbo,China,CN,971,1,29.87819,121.54945,Ningbo University,971
+Oldham,United Kingdom,GB,962,1,53.54231643676758,-2.117724895477295,Oldham Council,962

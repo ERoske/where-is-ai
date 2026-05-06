@@ -35,20 +35,25 @@ python scripts/fetch_bls_oews.py
 python scripts/render_usa_heatmap.py
 ```
 
-### 2. What are the biggest AI cities in the world?
+### 2. What are the biggest AI cities (metros) in the world?
 
-Source: **OpenAlex** API. Papers tagged with the Artificial Intelligence concept (C154945302), published from 2025-05-06 to 2026-05-06. Top 200 institutions globally, geo-joined to city.
+Source: **OpenAlex** API. Papers tagged with the Artificial Intelligence concept (C154945302), published from 2025-05-06 to 2026-05-06. Top 200 institutions globally, geo-joined to city, then **metro-aggregated** via a hand-curated city→metro mapping (`scripts/aggregate_to_metro.py`).
 
-Aggregation note: the world data uses **city** (from OpenAlex's institution metadata), not MSA. This means Stanford, Mountain View, Berkeley, and San Francisco show up as separate cities even though they're the same metro. **This makes China look more dominant than it would on a metro-to-metro basis** — Beijing's 15 institutions all tag "Beijing," while the U.S. Bay Area gets fragmented across half a dozen city names. I treat this as a known limitation in the writeup, not a finding.
+**Why metro-aggregation matters**: OpenAlex tags institutions by city. Beijing's 15 universities all tag "Beijing" (one city = one metro = coherent). But the U.S. Bay Area gets fragmented across "Stanford," "Mountain View," "Berkeley," "San Francisco," and "San Jose" — five separate city tags for one metro. Without aggregation, the Bay Area looks small and China looks artificially dominant. The fix: roll fragmented U.S. cities into proper U.S. Census MSAs/CSAs, consolidate Hong Kong's districts, leave already-coherent international cities as-is.
 
-**Top finding**: Beijing leads at 42,843 AI papers in 12 months from 15 institutions — more than Paris, London, Munich, and Zurich combined. By city count, China takes 14 of the top 30. The U.S. is competitive but distributed.
+**Could go more rigorous later** by joining against the EU JRC's [GHSL Urban Centre Database](https://ghsl.jrc.ec.europa.eu/) (~13,000 global urban centres). For now, the manual mapping covers the ~3 cases that actually fragment in our top-30 (Bay Area, Boston Metro, Hong Kong).
 
-**Hidden hubs**: Switzerland's Zurich (ETH + EPFL) at 2,931 papers from two institutions has the highest density per researcher on Earth. Singapore (NTU + NUS) at 5,725 papers is the densest non-Western AI economy. Hangzhou (Six Little Dragons + DeepSeek) at 10,550 from five institutions is the underrecognized Chinese cluster.
+**Top finding**: Beijing leads at 42,843 AI papers in 12 months from 15 institutions — more than Paris, London, Munich, and Zurich combined. By metro count, **China takes 13 of the top 30**. Hong Kong (post-aggregation) jumps to #4 globally.
+
+**The U.S. picture, properly aggregated**: SF-San Jose Bay Area lands at 6,997 papers from 3 top-200 institutions (Stanford + Google Mountain View + Berkeley). Boston Metro at 5,863 (Harvard + MIT + RES). Both are competitive globally but get dwarfed by Beijing, which is the actual story.
+
+**Hidden hubs**: Switzerland's Zurich (ETH + EPFL) at 2,931 papers has the highest density per researcher on Earth. Singapore (NTU + NUS) at 5,725 is the densest non-Western AI economy. Hangzhou (DeepSeek + Six Little Dragons) at 10,550 is the underrecognized Chinese cluster.
 
 Run it:
 
 ```bash
 python scripts/fetch_openalex_world.py
+python scripts/aggregate_to_metro.py    # NEW: city → metro aggregation
 python scripts/render_world_heatmap.py
 ```
 
@@ -60,7 +65,7 @@ Other limitations to know:
 
 - **AI definition is fuzzy.** SOC 15-1221 and 15-2051 are imperfect proxies for "AI workers." OpenAlex's "Artificial Intelligence" concept catches papers from biology, fusion physics, and other adjacent fields. I filtered the most obvious noise (single-institution outliers in non-AI fields like Toki and Braunschweig) but the concept boundary is genuinely soft.
 - **Paper count is not paper quality.** NeurIPS and ICML acceptances still skew heavily American. Chinese AI research clusters in mid-tier journals more than Western research does. Volume and quality are different metrics.
-- **The world data fragments U.S. metros.** See the note above. If anything, the China dominance is overstated by roughly the size of the Bay Area aggregation gap.
+- **Metro aggregation is hand-curated, not algorithmic.** I rolled fragmented U.S. cities (Bay Area, Boston Metro) into proper Census MSAs/CSAs and consolidated Hong Kong's districts. The mapping is in `scripts/aggregate_to_metro.py` and covers the ~3 cases that actually fragment in our top 30. International cities pass through unchanged because OpenAlex's tagging is already metro-coherent (Beijing's 15 institutions all tag "Beijing"). For more rigorous future global aggregation, the upgrade path is the EU JRC's GHSL Urban Centre Database.
 - **Snapshot, not trend.** This is one moment in time. The cities that climb in the next five years will be the ones combining cheap living, world-class universities, and government willingness to write big checks. I'll re-run this quarterly.
 
 If you find a number wrong, the data and code are here. I would rather correct a number than defend one.
@@ -76,8 +81,9 @@ pip install -r requirements.txt
 python scripts/fetch_bls_oews.py
 python scripts/render_usa_heatmap.py
 
-# World (OpenAlex)
+# World (OpenAlex) — metro-aggregated
 python scripts/fetch_openalex_world.py
+python scripts/aggregate_to_metro.py
 python scripts/render_world_heatmap.py
 
 # Optional: vertical social posts

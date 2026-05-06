@@ -13,7 +13,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT_DIR = ROOT / "outputs" / "Generated Images"
+OUT_DIR = ROOT / "images"
 
 CANVAS_W = 1080
 CANVAS_H = 1920

@@ -10,8 +10,8 @@ import pandas as pd
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA_DIR = ROOT / "outputs" / "ai_hub_data"
-OUT_DIR = ROOT / "outputs" / "Generated Images"
+DATA_DIR = ROOT / "data"
+OUT_DIR = ROOT / "images"
 
 CANVAS_W = 1080
 CANVAS_H = 1920
@@ -65,6 +65,8 @@ WORLD_LABEL_MAP = {
     ("Hong Kong", "HK"): ("Hong Kong", "Hong Kong"),
     ("London", "GB"): ("London", "United Kingdom"),
     ("Chengdu", "CN"): ("Chengdu", "China"),
+    ("SF-San Jose Bay Area", "US"): ("SF-Bay Area", "United States"),
+    ("Boston Metro", "US"): ("Boston Metro", "United States"),
 }
 
 
@@ -166,8 +168,8 @@ def main():
         value_format="{:,}",
     )
 
-    # WORLD TOP 10 (by AI paper output)
-    df_w = pd.read_csv(DATA_DIR / "world_ai_research_by_city.csv")
+    # WORLD TOP 10 (by AI paper output, METRO-aggregated)
+    df_w = pd.read_csv(DATA_DIR / "world_ai_research_by_metro.csv")
     df_w = df_w.sort_values("ai_works", ascending=False)
     # Apply same filter as the heatmap render: 2+ institutions OR 1500+ works,
     # excluding noise cities
@@ -187,8 +189,8 @@ def main():
 
     draw_card(
         rows=world_rows,
-        title="TOP 10 GLOBAL AI CITIES",
-        subtitle="Ranked by AI/ML papers published, last 12 months",
+        title="TOP 10 GLOBAL AI METROS",
+        subtitle="Ranked by AI/ML papers, last 12 months (metro-aggregated)",
         source="Source: OpenAlex  ·  May 2025 to May 2026  ·  My own analysis",
         output_path=OUT_DIR / "World-Top-10-AI-Cities-Vertical.png",
         value_format="{:,}",
