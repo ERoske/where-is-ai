@@ -15,7 +15,8 @@ from pathlib import Path
 import pandas as pd
 import requests
 
-OEWS_URL = "https://www.bls.gov/oes/special-requests/oesm24ma.zip"
+OEWS_URL = "https://www.bls.gov/oes/special-requests/oesm25ma.zip"
+OEWS_URL_FALLBACK = "https://www.bls.gov/oes/special-requests/oesm24ma.zip"
 AI_SOC_CODES = {"15-1221", "15-2051"}
 
 OUTPUT_DIR = Path(__file__).resolve().parent.parent / "data"
@@ -23,12 +24,19 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def download_oews():
-    print(f"Downloading BLS OEWS bulk data: {OEWS_URL}")
     headers = {"User-Agent": "Mozilla/5.0 (compatible; ai-hub-analysis/1.0)"}
-    resp = requests.get(OEWS_URL, headers=headers, timeout=120)
-    resp.raise_for_status()
-    print(f"Downloaded {len(resp.content) / 1024 / 1024:.1f} MB")
-    return resp.content
+    for url in (OEWS_URL, OEWS_URL_FALLBACK):
+        print(f"Trying: {url}")
+        try:
+            resp = requests.get(url, headers=headers, timeout=120)
+            if resp.status_code == 200 and resp.content[:2] == b"PK":
+                print(f"Downloaded {len(resp.content) / 1024 / 1024:.1f} MB from {url}")
+                return resp.content, url
+            else:
+                print(f"  status={resp.status_code}, not a zip")
+        except Exception as e:
+            print(f"  error: {e}")
+    raise RuntimeError("All OEWS URLs failed")
 
 
 def extract_metro_table(zip_bytes):
@@ -48,14 +56,30 @@ def extract_metro_table(zip_bytes):
 
 
 def main():
-    cache = OUTPUT_DIR / "oesm24ma.zip"
-    if cache.exists():
-        print(f"Using cached: {cache}")
-        zip_bytes = cache.read_bytes()
+    # Try 2025 cache first, then 2024
+    cache_25 = OUTPUT_DIR / "oesm25ma.zip"
+    cache_24 = OUTPUT_DIR / "oesm24ma.zip"
+    if cache_25.exists():
+        print(f"Using cached 2025: {cache_25}")
+        zip_bytes = cache_25.read_bytes()
+        used_url = "cached oesm25ma.zip"
+    elif cache_24.exists() and not cache_25.exists():
+        # Try fresh 2025 download; only fall back to cached 2024 if 2025 download fails
+        try:
+            zip_bytes, used_url = download_oews()
+            target_cache = cache_25 if "oesm25ma" in used_url else cache_24
+            target_cache.write_bytes(zip_bytes)
+            print(f"Cached to: {target_cache}")
+        except RuntimeError:
+            print(f"Falling back to cached 2024: {cache_24}")
+            zip_bytes = cache_24.read_bytes()
+            used_url = "cached oesm24ma.zip"
     else:
-        zip_bytes = download_oews()
-        cache.write_bytes(zip_bytes)
-        print(f"Cached to: {cache}")
+        zip_bytes, used_url = download_oews()
+        target_cache = cache_25 if "oesm25ma" in used_url else cache_24
+        target_cache.write_bytes(zip_bytes)
+        print(f"Cached to: {target_cache}")
+    print(f"Source: {used_url}")
 
     df = extract_metro_table(zip_bytes)
     print(f"Loaded {len(df):,} rows, {len(df.columns)} cols")
