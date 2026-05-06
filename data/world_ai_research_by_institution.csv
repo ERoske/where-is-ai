@@ -1,0 +1,201 @@
+institution_id,institution,ai_works,city,country,country_code,region,lat,lon,type
+https://openalex.org/I4210108322,National Institute for Fusion Science,203700,Toki,Japan,JP,,35.349998474121094,137.18333435058594,facility
+https://openalex.org/I7935750,Leibniz Institute DSMZ – German Collection of Microorganisms and Cell Cultures,121255,Braunschweig,Germany,DE,,52.21142578125,10.531188011169434,facility
+https://openalex.org/I60134161,Nagoya University,59993,Nagoya,Japan,JP,,35.18146896362305,136.90640258789062,education
+https://openalex.org/I1294671590,Centre National de la Recherche Scientifique,7809,Paris,France,FR,Île-de-France,48.85341,2.3488,government
+https://openalex.org/I19820366,Chinese Academy of Sciences,6615,Beijing,China,CN,Beijing,39.9075,116.39723,government
+https://openalex.org/I99065089,Tsinghua University,6071,Beijing,China,CN,Beijing,39.9075,116.39723,education
+https://openalex.org/I76130692,Zhejiang University,5423,Hangzhou,China,CN,Zhejiang,30.29365,120.16142,education
+https://openalex.org/I183067930,Shanghai Jiao Tong University,5352,Shanghai,China,CN,,31.222219467163086,121.45806121826172,education
+https://openalex.org/I204983213,Harbin Institute of Technology,4457,Harbin,China,CN,,45.75,126.6500015258789,education
+https://openalex.org/I82880672,Beihang University,4073,Beijing,China,CN,,39.907501220703125,116.39723205566406,education
+https://openalex.org/I20231570,Peking University,3936,Beijing,China,CN,Beijing,39.9075,116.39723,education
+https://openalex.org/I4210165038,University of Chinese Academy of Sciences,3853,Beijing,China,CN,Beijing,39.9075,116.39723,education
+https://openalex.org/I150229711,University of Electronic Science and Technology of China,3825,Chengdu,China,CN,,30.666669845581055,104.0666732788086,education
+https://openalex.org/I157773358,Sun Yat-sen University,3603,Guangzhou,China,CN,Guangdong,23.11667,113.25,education
+https://openalex.org/I76569877,Southeast University,3521,Nanjing,China,CN,Jiangsu,32.06167,118.77778,education
+https://openalex.org/I85461943,Saveetha University,3513,Chennai,India,IN,Tamil Nadu,13.08784,80.27847,education
+https://openalex.org/I125839683,Beijing Institute of Technology,3442,Beijing,China,CN,Beijing,39.9075,116.39723,education
+https://openalex.org/I37461747,Wuhan University,3349,Wuhan,China,CN,,30.583330154418945,114.26667022705078,education
+https://openalex.org/I889458895,University of Hong Kong,3300,Pok Fu Lam,Hong Kong,HK,Southern,22.26861,114.12924,education
+https://openalex.org/I126520041,University of Science and Technology of China,3251,Hefei,China,CN,Anhui,31.86389,117.28083,education
+https://openalex.org/I17145004,Northwestern Polytechnical University,3228,Xi'an,China,CN,,34.258331298828125,108.9286117553711,education
+https://openalex.org/I47720641,Huazhong University of Science and Technology,3141,Wuhan,China,CN,Hubei,30.58333,114.26667,education
+https://openalex.org/I116953780,Tongji University,3109,Shanghai,China,CN,,31.222219467163086,121.45806121826172,education
+https://openalex.org/I172675005,Nanyang Technological University,3078,Singapore,Singapore,SG,,1.28967,103.85007,education
+https://openalex.org/I87445476,Xi'an Jiaotong University,3037,Xi'an,China,CN,Shaanxi,34.25833,108.92861,education
+https://openalex.org/I139660479,Central South University,3014,Changsha,China,CN,Hunan,28.19874,112.97087,education
+https://openalex.org/I170215575,National University of Defense Technology,3000,Changsha,China,CN,,28.198740005493164,112.97087097167969,education
+https://openalex.org/I45129253,University College London,2944,London,United Kingdom,GB,England,51.50853,-0.12574,education
+https://openalex.org/I139759216,Beijing University of Posts and Telecommunications,2934,Beijing,China,CN,,39.907501220703125,116.39723205566406,education
+https://openalex.org/I97018004,Stanford University,2867,Stanford,United States,US,California,37.42411,-122.16608,education
+https://openalex.org/I149594827,Xidian University,2858,Xi'an,China,CN,,34.258331298828125,108.9286117553711,education
+https://openalex.org/I24943067,Fudan University,2840,Shanghai,China,CN,,31.222219467163086,121.45806121826172,education
+https://openalex.org/I14243506,Hong Kong Polytechnic University,2803,Hong Kong,Hong Kong,HK,,22.27832,114.17469,education
+https://openalex.org/I180726961,Shenzhen University,2716,Shenzhen,China,CN,,22.54553985595703,114.06829833984375,education
+https://openalex.org/I90610280,South China University of Technology,2698,Guangzhou,China,CN,,23.116670608520508,113.25,education
+https://openalex.org/I165932596,National University of Singapore,2647,Singapore,Singapore,SG,,1.28967,103.85007,education
+https://openalex.org/I1291425158,Google (United States),2613,Mountain View,United States,US,California,37.38605,-122.08385,company
+https://openalex.org/I24185976,Sichuan University,2599,Chengdu,China,CN,Sichuan,30.66667,104.06667,education
+https://openalex.org/I920381996,University of Puerto Rico at Carolina,2563,Carolina,Puerto Rico,PR,Carolina,18.38078,-65.95739,education
+https://openalex.org/I145286018,SRM Institute of Science and Technology,2519,Chennai,India,IN,,12.82361125946045,80.0441665649414,education
+https://openalex.org/I876193797,Vellore Institute of Technology University,2510,Vellore,India,IN,Tamil Nadu,12.9184,79.13255,education
+https://openalex.org/I154099455,Shandong University,2450,Jinan,China,CN,Shandong,36.66833,116.99722,education
+https://openalex.org/I162868743,Tianjin University,2405,Tianjin,China,CN,,39.14221954345703,117.17666625976562,education
+https://openalex.org/I9842412,Nanjing University of Aeronautics and Astronautics,2391,Nanjing,China,CN,,32.061668395996094,118.77777862548828,education
+https://openalex.org/I158842170,Chongqing University,2328,Chongqing,China,CN,,29.560260772705078,106.55770874023438,education
+https://openalex.org/I40120149,University of Oxford,2328,Oxford,United Kingdom,GB,England,51.75222,-1.25596,education
+https://openalex.org/I27357992,Dalian University of Technology,2309,Dalian,China,CN,,38.9122200012207,121.60221862792969,education
+https://openalex.org/I9224756,Northeastern University,2283,Shenyang,China,CN,,41.79222106933594,123.43277740478516,education
+https://openalex.org/I177725633,Chinese University of Hong Kong,2273,Hong Kong,Hong Kong,HK,,22.27832,114.17469,education
+https://openalex.org/I36399199,Nanjing University of Science and Technology,2260,Nanjing,China,CN,,32.061668395996094,118.77777862548828,education
+https://openalex.org/I185261750,University of Toronto,2256,Toronto,Canada,CA,Ontario,43.70643,-79.39864,education
+https://openalex.org/I47508984,Imperial College London,2235,London,United Kingdom,GB,England,51.50853,-0.12574,education
+https://openalex.org/I136199984,Harvard University,2208,Cambridge,United States,US,Massachusetts,42.3751,-71.10561,education
+https://openalex.org/I62916508,Technical University of Munich,2092,Munich,Germany,DE,Bavaria,48.13743,11.57549,education
+https://openalex.org/I4210164862,Artificial Intelligence in Medicine (Canada),2020,Toronto,Canada,CA,Ontario,43.65040588378906,-79.36351013183594,company
+https://openalex.org/I63966007,Massachusetts Institute of Technology,2004,Cambridge,United States,US,Massachusetts,42.3751,-71.10561,education
+https://openalex.org/I74973139,Carnegie Mellon University,1997,Pittsburgh,United States,US,Pennsylvania,40.44062,-79.99589,education
+https://openalex.org/I200769079,Hong Kong University of Science and Technology,1984,Hong Kong,Hong Kong,HK,,22.27832,114.17469,education
+https://openalex.org/I4210100255,Beijing Academy of Artificial Intelligence,1943,Beijing,China,CN,,39.99357223510742,116.3315200805664,other
+https://openalex.org/I145311948,Johns Hopkins University,1930,Baltimore,United States,US,Maryland,39.29038,-76.61219,education
+https://openalex.org/I196699116,Wuhan University of Technology,1924,Wuhan,China,CN,,30.583330154418945,114.26667022705078,education
+https://openalex.org/I168719708,City University of Hong Kong,1911,Hong Kong,Hong Kong,HK,,22.2783203125,114.17469024658203,education
+https://openalex.org/I194450716,Jilin University,1902,Changchun,China,CN,Jilin,43.88,125.32278,education
+https://openalex.org/I74801974,The University of Tokyo,1864,Tokyo,Japan,JP,,35.68949890136719,139.69171142578125,education
+https://openalex.org/I27837315,University of Michigan,1859,Ann Arbor,United States,US,Michigan,42.27756,-83.74088,education
+https://openalex.org/I21193070,Beijing Jiaotong University,1834,Beijing,China,CN,,39.907501220703125,116.39723205566406,education
+https://openalex.org/I241749,University of Cambridge,1829,Cambridge,United Kingdom,GB,England,52.2,0.11667,education
+https://openalex.org/I35440088,ETH Zurich,1819,Zurich,Switzerland,CH,Zurich,47.36667,8.55,education
+https://openalex.org/I887064364,University of Amsterdam,1811,Amsterdam,The Netherlands,NL,North Holland,52.37403,4.88969,education
+https://openalex.org/I4210090411,Google DeepMind (United Kingdom),1788,London,United Kingdom,GB,England,51.50853,-0.12574,company
+https://openalex.org/I81556334,Amrita Vishwa Vidyapeetham,1779,Coimbatore,India,IN,Tamil Nadu,11.00555,76.96612,education
+https://openalex.org/I219193219,Purdue University West Lafayette,1775,West Lafayette,United States,US,Indiana,40.42587,-86.90807,education
+https://openalex.org/I101407740,Chandigarh University,1774,Mohali,India,IN,,30.679950714111328,76.72210693359375,education
+https://openalex.org/I130701444,Georgia Institute of Technology,1772,Atlanta,United States,US,Georgia,33.749,-84.38798,education
+https://openalex.org/I143868143,Anhui University,1752,Hefei,China,CN,,31.863889694213867,117.28083038330078,education
+https://openalex.org/I16609230,Hunan University,1750,Changsha,China,CN,Hunan,28.19874,112.97087,education
+https://openalex.org/I16365422,Hefei University of Technology,1734,Hefei,China,CN,,31.863889694213867,117.28083038330078,education
+https://openalex.org/I881766915,Nanjing University,1726,Nanjing,China,CN,,32.061668395996094,118.77777862548828,education
+https://openalex.org/I1330855593,Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology,1668,Chennai,India,IN,,13.08784008026123,80.27847290039062,education
+https://openalex.org/I57206974,New York University,1654,New York,United States,US,,40.714271545410156,-74.00596618652344,education
+https://openalex.org/I4210137149,Renewable Energy Systems (United States),1651,Needham,United States,US,Massachusetts,42.305484771728516,-71.2287826538086,company
+https://openalex.org/I157725225,University of Illinois Urbana-Champaign,1645,Urbana,United States,US,Illinois,40.11059,-88.20727,education
+https://openalex.org/I4800084,Southwest Jiaotong University,1643,Chengdu,China,CN,,30.666669845581055,104.0666732788086,education
+https://openalex.org/I201448701,University of Washington,1636,Seattle,United States,US,Washington,47.60621,-122.33207,education
+https://openalex.org/I4210127384,Prompt (Canada),1636,Montreal,Canada,CA,Quebec,45.5020751953125,-73.56744384765625,company
+https://openalex.org/I191208505,Xiamen University,1630,Xiamen,China,CN,,24.47978973388672,118.08187103271484,education
+https://openalex.org/I205783295,Cornell University,1614,Ithaca,United States,US,New York,42.44063,-76.49661,education
+https://openalex.org/I37796252,Beijing University of Technology,1595,Beijing,China,CN,,39.907501220703125,116.39723205566406,education
+https://openalex.org/I113940042,Shanghai University,1563,Shanghai,China,CN,,31.222219467163086,121.45806121826172,education
+https://openalex.org/I55712492,Zhejiang University of Technology,1551,Hangzhou,China,CN,,30.293649673461914,120.16142272949219,education
+https://openalex.org/I200845125,Nanjing University of Information Science and Technology,1530,Nanjing,China,CN,Jiangsu,32.06167,118.77778,education
+https://openalex.org/I95457486,"University of California, Berkeley",1517,Berkeley,United States,US,California,37.87159,-122.27275,education
+https://openalex.org/I139024713,Guangdong University of Technology,1515,Guangzhou,China,CN,,23.03895378112793,113.39608001708984,education
+https://openalex.org/I129604602,The University of Sydney,1508,Sydney,Australia,AU,New South Wales,-33.86785,151.20732,education
+https://openalex.org/I165779595,The University of Melbourne,1499,Melbourne,Australia,AU,Victoria,-37.814,144.96332,education
+https://openalex.org/I244572783,Symbiosis International University,1499,Pune,India,IN,Maharashtra,18.51957,73.85535,education
+https://openalex.org/I139264467,Seoul National University,1498,Seoul,South Korea,KR,Seoul,37.566,126.9784,education
+https://openalex.org/I50760025,Hangzhou Dianzi University,1485,Hangzhou,China,CN,,30.293649673461914,120.16142272949219,education
+https://openalex.org/I154526488,Inserm,1482,Paris,France,FR,Île-de-France,48.85341,2.3488,government
+https://openalex.org/I151727225,Harbin Engineering University,1475,Harbin,China,CN,,45.75,126.6500015258789,education
+https://openalex.org/I92403157,University of Science and Technology Beijing,1473,Beijing,China,CN,,39.907501220703125,116.39723205566406,education
+https://openalex.org/I17442442,State Grid Corporation of China (China),1471,Beijing,China,CN,Beijing,39.9075,116.39723,company
+https://openalex.org/I25757504,China University of Mining and Technology,1467,Xuzhou,China,CN,,34.20441818237305,117.28385925292969,education
+https://openalex.org/I41198531,Nanjing University of Posts and Telecommunications,1467,Nanjing,China,CN,,32.080501556396484,118.76499938964844,education
+https://openalex.org/I80947539,Fuzhou University,1462,Fuzhou,China,CN,,26.061389923095703,119.30610656738281,education
+https://openalex.org/I74319210,Chitkara University,1460,Chandigarh,India,IN,,30.736289978027344,76.78839874267578,education
+https://openalex.org/I166073570,Binus University,1428,Jakarta,Indonesia,ID,Jakarta,-6.21462,106.84513,education
+https://openalex.org/I78577930,Columbia University,1422,New York,United States,US,New York,40.71427,-74.00597,education
+https://openalex.org/I3045169105,Southern University of Science and Technology,1415,Shenzhen,China,CN,Guangdong,22.54554,114.0683,education
+https://openalex.org/I25254941,Beijing Normal University,1403,Beijing,China,CN,Beijing,39.9075,116.39723,education
+https://openalex.org/I33213144,University of Florida,1388,Gainesville,United States,US,Florida,29.65163,-82.32483,education
+https://openalex.org/I98358874,Delft University of Technology,1378,Delft,The Netherlands,NL,,52.00667190551758,4.355559825897217,education
+https://openalex.org/I1174212,University of Southern California,1366,Los Angeles,United States,US,California,34.05223,-118.24368,education
+https://openalex.org/I31746571,UNSW Sydney,1357,Sydney,Australia,AU,New South Wales,-33.86785,151.20732,education
+https://openalex.org/I66867065,East China Normal University,1352,Shanghai,China,CN,,31.222219467163086,121.45806121826172,education
+https://openalex.org/I98677209,University of Edinburgh,1352,Edinburgh,United Kingdom,GB,Scotland,55.95206,-3.19648,education
+https://openalex.org/I32971472,Yale University,1351,New Haven,United States,US,Connecticut,41.30815,-72.92816,education
+https://openalex.org/I36258959,University of California San Diego,1349,San Diego,United States,US,California,32.71571,-117.16472,education
+https://openalex.org/I114027177,University of North Carolina at Chapel Hill,1347,Chapel Hill,United States,US,North Carolina,35.9132,-79.05584,education
+https://openalex.org/I93860229,Politecnico di Milano,1329,Milan,Italy,IT,Lombardy,45.46427,9.18951,education
+https://openalex.org/I56590836,Monash University,1325,Melbourne,Australia,AU,Victoria,-37.814,144.96332,education
+https://openalex.org/I135310074,University of Wisconsin–Madison,1317,Madison,United States,US,Wisconsin,43.07305,-89.40123,education
+https://openalex.org/I157485424,Korea Advanced Institute of Science and Technology,1315,Daejeon,South Korea,KR,,36.34912872314453,127.38493347167969,education
+https://openalex.org/I205237279,Nankai University,1315,Tianjin,China,CN,,39.14221954345703,117.17666625976562,education
+https://openalex.org/I86519309,The University of Texas at Austin,1305,Austin,United States,US,Texas,30.26715,-97.74306,education
+https://openalex.org/I163340411,Hohai University,1299,Nanjing,China,CN,,32.061668395996094,118.77777862548828,education
+https://openalex.org/I80143920,Shandong University of Science and Technology,1298,Qingdao,China,CN,,36.06488037109375,120.38041687011719,education
+https://openalex.org/I110360157,Lovely Professional University,1279,Phagwāra,India,IN,,31.224519729614258,75.77387237548828,education
+https://openalex.org/I38877650,Zhengzhou University,1276,Zhengzhou,China,CN,,34.75777816772461,113.64861297607422,education
+https://openalex.org/I183935753,King's College London,1274,London,United Kingdom,GB,England,51.50853,-0.12574,education
+https://openalex.org/I10535382,Chongqing University of Posts and Telecommunications,1261,Chongqing,China,CN,,29.560260772705078,106.55770874023438,education
+https://openalex.org/I96908189,Xinjiang University,1253,Ürümqi,China,CN,,43.800960540771484,87.60045623779297,education
+https://openalex.org/I99464096,KU Leuven,1252,Leuven,Belgium,BE,Flanders,50.87959,4.70093,education
+https://openalex.org/I3923682,Soochow University,1244,Suzhou,China,CN,Jiangsu,31.30408,120.59538,education
+https://openalex.org/I39804081,Sorbonne Université,1239,Paris,France,FR,Île-de-France,48.85341,2.3488,education
+https://openalex.org/I79576946,University of Pennsylvania,1239,Philadelphia,United States,US,Pennsylvania,39.95238,-75.16362,education
+https://openalex.org/I9360294,University of Bologna,1238,Bologna,Italy,IT,Emilia-Romagna,44.49381,11.33875,education
+https://openalex.org/I141945490,University of British Columbia,1233,Vancouver,Canada,CA,British Columbia,49.24966,-123.11934,education
+https://openalex.org/I193775966,Yonsei University,1229,Seoul,South Korea,KR,Seoul,37.566,126.9784,education
+https://openalex.org/I204512498,University of Macau,1217,Macao,Macao,MO,Macau,22.20056,113.54611,education
+https://openalex.org/I861853513,Sapienza University of Rome,1208,Rome,Italy,IT,Lazio,41.89193,12.51133,education
+https://openalex.org/I130769515,Pennsylvania State University,1203,State College,United States,US,Pennsylvania,40.79339,-77.86,education
+https://openalex.org/I37987034,Guangzhou University,1196,Guangzhou,China,CN,,23.116670608520508,113.25,education
+https://openalex.org/I875944469,Koneru Lakshmaiah Education Foundation,1194,Vijayawada,India,IN,,16.507450103759766,80.64659881591797,education
+https://openalex.org/I887968799,RWTH Aachen University,1185,Aachen,Germany,DE,,50.776641845703125,6.0834197998046875,education
+https://openalex.org/I164861460,Manipal Academy of Higher Education,1178,Manipal,India,IN,Karnataka,13.35,74.78333,education
+https://openalex.org/I277688954,Université Paris-Saclay,1175,Gif-sur-Yvette,France,FR,Île-de-France,48.68333,2.13333,education
+https://openalex.org/I55732556,Arizona State University,1154,Tempe,United States,US,Arizona,33.41477,-111.90931,education
+https://openalex.org/I5023651,McGill University,1153,Montreal,Canada,CA,Quebec,45.50884,-73.58781,education
+https://openalex.org/I4210136793,Peng Cheng Laboratory,1149,Shenzhen,China,CN,,22.54553985595703,114.06829833984375,facility
+https://openalex.org/I197347611,Korea University,1142,Seoul,South Korea,KR,Seoul,37.566,126.9784,education
+https://openalex.org/I153473198,North China Electric Power University,1141,Beijing,China,CN,,39.907501220703125,116.39723205566406,education
+https://openalex.org/I161318765,"University of California, Los Angeles",1132,Los Angeles,United States,US,California,34.05223,-118.24368,education
+https://openalex.org/I8204097,Ludwig-Maximilians-Universität München,1129,Munich,Germany,DE,Bavaria,48.13743,11.57549,education
+https://openalex.org/I111599522,Jiangnan University,1112,Wuxi,China,CN,,31.568870544433594,120.28856658935547,education
+https://openalex.org/I202697423,University of Zurich,1112,Zurich,Switzerland,CH,Zurich,47.36667,8.55,education
+https://openalex.org/I91045830,Texas A&M University,1109,College Station,United States,US,Texas,30.62798,-96.33441,education
+https://openalex.org/I106778892,Princess Nourah bint Abdulrahman University,1108,Riyadh,Saudi Arabia,SA,,24.68773078918457,46.72185134887695,education
+https://openalex.org/I5124864,École Polytechnique Fédérale de Lausanne,1103,Lausanne,Switzerland,CH,Vaud,46.516,6.63282,education
+https://openalex.org/I28407311,University of Manchester,1096,Manchester,United Kingdom,GB,England,53.48095,-2.23743,education
+https://openalex.org/I862893732,Telkom University,1090,Bandung,Indonesia,ID,West Java,-6.92222,107.60694,education
+https://openalex.org/I4210152380,Shenzhen Technology University,1083,Shenzhen,China,CN,,22.54553985595703,114.06829833984375,education
+https://openalex.org/I43313876,Dalian Maritime University,1077,Dalian,China,CN,,38.9122200012207,121.60221862792969,education
+https://openalex.org/I148128674,University of Shanghai for Science and Technology,1073,Shanghai,China,CN,,31.222219467163086,121.45806121826172,education
+https://openalex.org/I4210145761,Shenzhen Institutes of Advanced Technology,1072,Shenzhen,China,CN,,22.54553985595703,114.06829833984375,facility
+https://openalex.org/I114017466,University of Technology Sydney,1070,Sydney,Australia,AU,New South Wales,-33.86785,151.20732,education
+https://openalex.org/I168879160,Zhejiang University of Science and Technology,1064,Hangzhou,China,CN,,30.219491958618164,120.0273208618164,education
+https://openalex.org/I170897317,Duke University,1063,Durham,United States,US,North Carolina,35.99403,-78.89862,education
+https://openalex.org/I3124059619,China University of Geosciences,1062,Wuhan,China,CN,,30.583330154418945,114.26667022705078,education
+https://openalex.org/I200296433,Chinese Academy of Medical Sciences & Peking Union Medical College,1059,Beijing,China,CN,Beijing,39.9075,116.39723,education
+https://openalex.org/I40347166,University of Chicago,1058,Chicago,United States,US,Illinois,41.85003,-87.65005,education
+https://openalex.org/I4210129773,Institute of Engineering,1056,Pulchowk,Nepal,NP,Bagmati Province,27.67824,85.31685,education
+https://openalex.org/I223822909,Heidelberg University,1052,Heidelberg,Germany,DE,Baden-Wurttemberg,49.40768,8.69079,education
+https://openalex.org/I154425047,University of Alberta,1051,Edmonton,Canada,CA,Alberta,53.55014,-113.46871,education
+https://openalex.org/I66946132,"University of Maryland, College Park",1047,College Park,United States,US,Maryland,38.98067,-76.93692,education
+https://openalex.org/I848706,Sungkyunkwan University,1044,Seoul,South Korea,KR,Seoul,37.566,126.9784,education
+https://openalex.org/I4210126065,Shanghai Electric (China),1042,Shanghai,China,CN,,31.175798416137695,121.38681030273438,company
+https://openalex.org/I7882870,University of Glasgow,1035,Glasgow,United Kingdom,GB,Scotland,55.86515,-4.25763,education
+https://openalex.org/I20942203,Hainan University,1031,Haikou,China,CN,,20.034210205078125,110.34651184082031,education
+https://openalex.org/I4210123185,Zhejiang Lab,1027,Hangzhou,China,CN,,30.271240234375,119.96514892578125,facility
+https://openalex.org/I102335020,Karlsruhe Institute of Technology,1023,Karlsruhe,Germany,DE,Baden-Wurttemberg,49.00937,8.40444,education
+https://openalex.org/I5343935,Guilin University of Electronic Technology,1022,Guilin,China,CN,,25.281644821166992,110.3372802734375,education
+https://openalex.org/I60054993,Graphic Era University,1020,Dehradun,India,IN,,30.324430465698242,78.03392028808594,education
+https://openalex.org/I10660446,Kunming University of Science and Technology,1019,Kunming,China,CN,,25.061561584472656,102.69563293457031,education
+https://openalex.org/I4210101093,St. Joseph's Institute of Technology,1015,Chennai,India,IN,,13.08784008026123,80.27847290039062,education
+https://openalex.org/I115592961,Jiangsu University,1011,Zhenjiang,China,CN,,32.21086120605469,119.455078125,education
+https://openalex.org/I138689650,University of Padua,1008,Padua,Italy,IT,Veneto,45.40797,11.88586,education
+https://openalex.org/I159176309,Universität Hamburg,1006,Hamburg,Germany,DE,Hamburg,53.55073,9.99302,education
+https://openalex.org/I151746483,University of Waterloo,1000,Waterloo,Canada,CA,Ontario,43.4668,-80.51639,education
+https://openalex.org/I145872427,Radboud University Nijmegen,999,Nijmegen,The Netherlands,NL,Gelderland,51.8425,5.85278,education
+https://openalex.org/I859038795,Virginia Tech,999,Blacksburg,United States,US,Virginia,37.22957,-80.41394,education
+https://openalex.org/I150807315,Guangxi University,997,Nanning,China,CN,,22.816669464111328,108.3166732788086,education
+https://openalex.org/I165143802,The University of Queensland,985,Brisbane,Australia,AU,Queensland,-27.46794,153.02809,education
+https://openalex.org/I204465549,Washington University in St. Louis,984,St Louis,United States,US,Missouri,38.62727,-90.19789,education
+https://openalex.org/I28022161,King Saud University,984,Riyadh,Saudi Arabia,SA,Riyadh Region,24.68773,46.72185,education
+https://openalex.org/I150468666,Emory University,983,Atlanta,United States,US,,33.749000549316406,-84.38797760009766,education
+https://openalex.org/I109935558,Ningbo University,971,Ningbo,China,CN,Zhejiang,29.87819,121.54945,education
+https://openalex.org/I43814544,Sathyabama Institute of Science and Technology,963,Chennai,India,IN,Tamil Nadu,12.872981071472168,80.22177124023438,education
+https://openalex.org/I189210763,Yunnan University,962,Kunming,China,CN,,25.038890838623047,102.71833038330078,education
+https://openalex.org/I4210164339,Oldham Council,962,Oldham,United Kingdom,GB,,53.54231643676758,-2.117724895477295,government
