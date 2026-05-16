@@ -85,6 +85,38 @@ def main():
     lines.append("**Data**: BLS OEWS, May 2024 release (April 2, 2025) vs May 2025 release (May 15, 2026).\n")
     lines.append("**SOCs**: 15-1221 (Computer and Information Research Scientists) + 15-2051 (Data Scientists).\n\n")
 
+    # Caveat about BLS confidentiality suppression, plus dynamic detection of
+    # likely baseline-artifact rows (suppressed in the prior year, real in the
+    # current year, mechanically inflated percentages).
+    lines.append("## A note on BLS confidentiality and tiny baselines\n\n")
+    lines.append(
+        "BLS suppresses metro-level employment when the count falls below a confidentiality threshold. "
+        "Suppressed values get reported as null or as a floor near 80 workers. Where the prior-year baseline was suppressed "
+        "and the current-year number is real, the percentage change column below is mechanically inflated and is not actual growth. "
+        "Treat the percentage column with care whenever the prior-year value is 80 or missing. "
+        "The absolute delta column (Δ workers) is still meaningful in those rows because the current-year number is real.\n\n"
+    )
+    # Suppression floor in BLS OEWS is ~80 workers. A prior-year value of 80
+    # or null combined with a current-year value over 500 and a percentage
+    # change over 500% is almost certainly a suppression-to-real artifact, not
+    # genuine growth. Real metros do not 6x in a year.
+    artifact_mask = (
+        (merged["ai_emp_24"].fillna(0) <= 200)
+        & (merged["ai_emp_25"] >= 500)
+        & (merged["pct_change_emp"] >= 500)
+    )
+    artifact_rows = merged[artifact_mask].sort_values("pct_change_emp", ascending=False)
+    if len(artifact_rows) > 0:
+        examples = [
+            f"{r['area_title']} ({int(r['ai_emp_24']) if not pd.isna(r['ai_emp_24']) else 'null'} to {int(r['ai_emp_25'])}, listed as {r['pct_change_emp']:+.0f}%)"
+            for _, r in artifact_rows.iterrows()
+        ]
+        lines.append(f"**Likely baseline-artifact rows this cycle ({len(artifact_rows)}):** " + "; ".join(examples) + ".\n\n")
+        lines.append(
+            "Those are not genuine multi-bagger growth. The prior-year baseline was suppressed, the current-year number is real, "
+            "and the percentage column reflects the gap between suppression and reality rather than actual hiring.\n\n"
+        )
+
     lines.append("## Biggest absolute gainers (most AI workers added)\n")
     lines.append("| # | Metro | 2024 | 2025 | Δ workers | Δ % |\n|---|---|---|---|---|---|\n")
     for i, r in big_winners.reset_index(drop=True).iterrows():

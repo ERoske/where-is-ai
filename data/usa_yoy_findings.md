@@ -3,6 +3,14 @@
 **Data**: BLS OEWS, May 2024 release (April 2, 2025) vs May 2025 release (May 15, 2026).
 **SOCs**: 15-1221 (Computer and Information Research Scientists) + 15-2051 (Data Scientists).
 
+## A note on BLS confidentiality and tiny baselines
+
+BLS suppresses metro-level employment when the count falls below a confidentiality threshold. Suppressed values get reported as null or as a floor near 80 workers. Where the prior-year baseline was suppressed and the current-year number is real, the percentage change column below is mechanically inflated and is not actual growth. Treat the percentage column with care whenever the prior-year value is 80 or missing. The absolute delta column (Δ workers) is still meaningful in those rows because the current-year number is real.
+
+**Likely baseline-artifact rows this cycle (2):** Salt Lake City-Murray, UT (80 to 2970, listed as +3612%); Warner Robins, GA (80 to 760, listed as +850%).
+
+Those are not genuine multi-bagger growth. The prior-year baseline was suppressed, the current-year number is real, and the percentage column reflects the gap between suppression and reality rather than actual hiring.
+
 ## Biggest absolute gainers (most AI workers added)
 | # | Metro | 2024 | 2025 | Δ workers | Δ % |
 |---|---|---|---|---|---|
