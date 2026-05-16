@@ -135,7 +135,7 @@ def main():
         heatmap_path=OUT_DIR / "Heatmap-USA-AI-Jobs.png",
         title="Where are the AI jobs in the USA?",
         closing_q="Did your city make the map?",
-        source="Source: BLS OEWS May 2024 (SOC 15-1221 + 15-2051)  ·  My own analysis",
+        source="Source: BLS OEWS May 2025 (SOC 15-1221 + 15-2051)  ·  My own analysis",
         output_path=OUT_DIR / "Heatmap-USA-AI-Jobs-Vertical.png",
     )
 

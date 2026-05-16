@@ -42,6 +42,12 @@ MSA_COORDS = {
     "Pittsburgh, PA": ("Pittsburgh", 40.4406, -79.9959),
     "Raleigh-Cary, NC": ("Raleigh", 35.7796, -78.6382),
     "Miami-Fort Lauderdale-West Palm Beach, FL": ("Miami", 25.7617, -80.1918),
+    # Added May 2025: high-concentration metros that surfaced in the new release.
+    "Warner Robins, GA": ("Warner Robins", 32.6131, -83.6240),
+    "Bloomington, IL": ("Bloomington IL", 40.4842, -88.9937),
+    "Ogden, UT": ("Ogden", 41.2230, -111.9738),
+    "Salt Lake City-Murray, UT": ("Salt Lake City", 40.7608, -111.8910),
+    "Madison, WI": ("Madison", 43.0731, -89.4012),
 }
 
 # Top 15 metros to label on the map. The rest get plotted as dots only (clean look).
@@ -66,6 +72,11 @@ LABELED_METROS = {
     "Pittsburgh, PA",
     "Miami-Fort Lauderdale-West Palm Beach, FL",
     "Houston-Pasadena-The Woodlands, TX",
+    "Warner Robins, GA",
+    "Bloomington, IL",
+    "Ogden, UT",
+    "Salt Lake City-Murray, UT",
+    "Madison, WI",
 }
 
 # Per-label positioning override (some labels need bottom or right placement to avoid overlap)
@@ -80,6 +91,11 @@ LABEL_POSITION_OVERRIDE = {
     "Pittsburgh": "bottom center",
     "Huntsville": "bottom center",
     "Research Triangle": "middle right",
+    "Warner Robins": "bottom center",
+    "Bloomington IL": "top center",
+    "Ogden": "top right",
+    "Salt Lake City": "bottom left",
+    "Madison": "top center",
 }
 
 
@@ -166,7 +182,7 @@ def main():
         paper_bgcolor="#040810",
         plot_bgcolor="#040810",
         title=dict(
-            text="<b>WHERE AI WORKS IN AMERICA</b><br><span style='font-size:14px; color:#9eb3d6'>BLS Occupational Employment Statistics, May 2024 · SOC 15-1221 + 15-2051 · sized by absolute employment, colored by concentration</span>",
+            text="<b>WHERE AI WORKS IN AMERICA</b><br><span style='font-size:14px; color:#9eb3d6'>BLS Occupational Employment Statistics, May 2025 · SOC 15-1221 + 15-2051 · sized by absolute employment, colored by concentration</span>",
             font=dict(color="white", size=22, family="Helvetica, Arial, sans-serif"),
             x=0.05,
             xanchor="left",
@@ -188,7 +204,7 @@ def main():
     df_top_conc = df.sort_values("ai_per_1000", ascending=False).head(15).reset_index(drop=True)
 
     lines = ["# USA AI Hub Findings — Original Analysis\n"]
-    lines.append("**Data**: BLS OEWS, May 2024 release. SOC codes 15-1221 (Computer and Information Research Scientists) + 15-2051 (Data Scientists). Aggregated by Metropolitan Statistical Area.\n")
+    lines.append("**Data**: BLS OEWS, May 2025 release (downloaded 2026-05-15). SOC codes 15-1221 (Computer and Information Research Scientists) + 15-2051 (Data Scientists). Aggregated by Metropolitan Statistical Area.\n")
     lines.append("\n## Top 15 metros by absolute AI employment\n")
     lines.append("| # | Metro | AI workers | AI per 1,000 jobs |\n|---|---|---|---|\n")
     for i, r in df_top_abs.iterrows():

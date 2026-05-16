@@ -8,24 +8,24 @@ This repo contains everything: the scripts, the data, the heatmaps, the findings
 
 ## What's in here
 
-- **`scripts/`** — Python code to fetch, analyze, and visualize. Six scripts, runnable on a fresh machine in under five minutes once dependencies are installed.
-- **`data/`** — Raw CSVs from BLS and OpenAlex, plus aggregated findings.
-- **`images/`** — The heatmaps and vertical social-post assets.
+- **`scripts/`**: Python code to fetch, analyze, and visualize. Several scripts, runnable on a fresh machine in under five minutes once dependencies are installed.
+- **`data/`**: Raw CSVs from BLS and OpenAlex, plus aggregated findings and the year-over-year diff.
+- **`images/`**: The heatmaps and vertical social-post assets.
 
 ## The two questions
 
 ### 1. Where are the AI jobs in the USA?
 
-Source: U.S. Bureau of Labor Statistics, **Occupational Employment and Wage Statistics (OEWS)**, May 2024 release. The May 2025 release is scheduled to drop on **Friday, May 15, 2026** per BLS's release schedule. The fetch script tries `oesm25ma.zip` first and falls back to `oesm24ma.zip`, so re-running after May 15 will automatically pick up the new release. Two AI-relevant SOC codes:
+Source: U.S. Bureau of Labor Statistics, **Occupational Employment and Wage Statistics (OEWS)**, May 2025 release (published May 15, 2026). The fetch script tries `oesm25ma.zip` first and falls back to `oesm24ma.zip` if the new release isn't yet available, so re-running picks up future releases automatically. Two AI-relevant SOC codes:
 
-- **15-1221** — Computer and Information Research Scientists
-- **15-2051** — Data Scientists
+- **15-1221**: Computer and Information Research Scientists
+- **15-2051**: Data Scientists
 
-Aggregated by **Metropolitan Statistical Area (MSA)** — the U.S. Census/OMB definition that bundles a core city with its commuter-tied surrounding counties. So "San Francisco-Oakland-Fremont, CA" is the MSA, not just the city of San Francisco.
+Aggregated by **Metropolitan Statistical Area (MSA)**, the U.S. Census and OMB definition that bundles a core city with its commuter-tied surrounding counties. So "San Francisco-Oakland-Fremont, CA" is the MSA, not just the city of San Francisco.
 
-**Top finding by absolute employment**: New York leads at 21,240 AI workers, then DC (11,680), San Francisco-Oakland (11,210). The Bay Area splits across two BLS MSAs (SF-Oakland-Fremont + San Jose-Sunnyvale-Santa Clara) and rivals New York when summed.
+**Top finding by absolute employment**: New York leads at 25,260 AI workers, up roughly nineteen percent from the May 2024 release. Washington DC is second at 12,680, San Francisco-Oakland third at 12,130. The Bay Area splits across two BLS MSAs (SF-Oakland-Fremont + San Jose-Sunnyvale-Santa Clara) and rivals New York when summed.
 
-**Top finding by concentration (per 1,000 jobs)**: San Jose dominates at 7.72/1,000. The genuine surprise is Lexington Park, Maryland at 6.98/1,000 — Naval Air Station Patuxent River drives it. Huntsville, Alabama (Redstone Arsenal) and Durham, NC (Research Triangle) round out the top concentration tier. Defense and research-anchored AI clusters are real and underreported.
+**Top finding by concentration (per 1,000 jobs)**: Warner Robins, Georgia leads at 9.99 per thousand, anchored by AI roles at Robins Air Force Base and the Warner Robins Air Logistics Complex. San Jose comes in second at 7.29 (down slightly from 7.72 a year ago). Bloomington, Illinois lands third at 6.70 (State Farm and Country Financial). Lexington Park, Maryland is fourth at 6.37, anchored by Naval Air Station Patuxent River. Huntsville dropped out of the top ten this cycle. Defense and corporate-headquarters AI clusters are real and underreported.
 
 Run it:
 
@@ -39,11 +39,11 @@ python scripts/render_usa_heatmap.py
 
 Source: **OpenAlex** API. Papers tagged with the Artificial Intelligence concept (C154945302), published from 2025-05-06 to 2026-05-06. Top 200 institutions globally, geo-joined to city, then **metro-aggregated** via a hand-curated city→metro mapping (`scripts/aggregate_to_metro.py`).
 
-**Why metro-aggregation matters**: OpenAlex tags institutions by city. Beijing's 15 universities all tag "Beijing" (one city = one metro = coherent). But the U.S. Bay Area gets fragmented across "Stanford," "Mountain View," "Berkeley," "San Francisco," and "San Jose" — five separate city tags for one metro. Without aggregation, the Bay Area looks small and China looks artificially dominant. The fix: roll fragmented U.S. cities into proper U.S. Census MSAs/CSAs, consolidate Hong Kong's districts, leave already-coherent international cities as-is.
+**Why metro-aggregation matters**: OpenAlex tags institutions by city. Beijing's 15 universities all tag "Beijing" (one city, one metro, coherent). But the U.S. Bay Area gets fragmented across "Stanford," "Mountain View," "Berkeley," "San Francisco," and "San Jose," which is five separate city tags for one metro. Without aggregation, the Bay Area looks small and China looks artificially dominant. The fix: roll fragmented U.S. cities into proper U.S. Census MSAs/CSAs, consolidate Hong Kong's districts, leave already-coherent international cities as-is.
 
 **Could go more rigorous later** by joining against the EU JRC's [GHSL Urban Centre Database](https://ghsl.jrc.ec.europa.eu/) (~13,000 global urban centres). For now, the manual mapping covers the ~3 cases that actually fragment in our top-30 (Bay Area, Boston Metro, Hong Kong).
 
-**Top finding**: Beijing leads at 42,843 AI papers in 12 months from 15 institutions — more than Paris, London, Munich, and Zurich combined. By metro count, **China takes 13 of the top 30**. Hong Kong (post-aggregation) jumps to #4 globally.
+**Top finding**: Beijing leads at 42,843 AI papers in 12 months from 15 institutions, more than Paris, London, Munich, and Zurich combined. By metro count, **China takes 13 of the top 30**. Hong Kong (post-aggregation) jumps to #4 globally.
 
 **The U.S. picture, properly aggregated**: SF-San Jose Bay Area lands at 6,997 papers from 3 top-200 institutions (Stanford + Google Mountain View + Berkeley). Boston Metro at 5,863 (Harvard + MIT + RES). Both are competitive globally but get dwarfed by Beijing, which is the actual story.
 
@@ -81,7 +81,7 @@ pip install -r requirements.txt
 python scripts/fetch_bls_oews.py
 python scripts/render_usa_heatmap.py
 
-# World (OpenAlex) — metro-aggregated
+# World (OpenAlex), metro-aggregated
 python scripts/fetch_openalex_world.py
 python scripts/aggregate_to_metro.py
 python scripts/render_world_heatmap.py

@@ -22,8 +22,9 @@ env/
 .DS_Store
 Thumbs.db
 
-# Cached BLS bulk download (regenerable)
+# Cached BLS bulk downloads (regenerable)
 data/oesm24ma.zip
+data/oesm25ma.zip
 
 # Temporary files
 *.tmp

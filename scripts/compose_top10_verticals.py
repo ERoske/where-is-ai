@@ -163,7 +163,7 @@ def main():
         rows=usa_rows,
         title="TOP 10 U.S. AI CITIES",
         subtitle="Ranked by AI workforce employment",
-        source="Source: BLS OEWS May 2024  ·  SOC 15-1221 + 15-2051  ·  My own analysis",
+        source="Source: BLS OEWS May 2025  ·  SOC 15-1221 + 15-2051  ·  My own analysis",
         output_path=OUT_DIR / "USA-Top-10-AI-Cities-Vertical.png",
         value_format="{:,}",
     )
